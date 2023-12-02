@@ -1,0 +1,172 @@
+body {
+    min-height: 100vh;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(205, 33%, 90%);
+}
+
+.main-card {
+    width: 50em;
+    height: auto;
+    background-color: white;
+    padding: 1.2em 1.5em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2em;
+}
+
+.box-title {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.box-title h1 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: hsl(224, 21%, 14%);
+}
+.box-title h1 span {
+    background-color: hsl(219, 85%, 26%);
+    padding: 0.1em 0.6em;
+    border-radius: 0.5em;
+    color: white;
+    margin-left: 0.3em;
+}
+.box-title p {
+    position: relative;
+    left: 32.5em;
+    color: hsl(219, 12%, 42%);
+    cursor: pointer;
+}
+.box-title p:hover {
+    color: hsl(219, 85%, 26%);
+}
+
+.noti-box {
+    display: flex;
+    justify-self: start;
+    padding: 1em;
+    margin: 0.3em 0;
+    cursor: pointer;
+    border-radius: 0.5em;
+}
+.noti-box img {
+    width: 3em;
+    height: 3em;
+    grid-column: 1 2;
+    grid-row: 1 3;
+}
+.noti-discript {
+    width: 36em;
+    margin-left: 1em;
+}
+.noti-discript p {
+    margin: 0.2em;
+    color: hsl(219, 12%, 42%);
+}
+.noti-discript p strong {
+    color: hsl(224, 21%, 14%);
+    margin-right: 0.5em;
+}
+.noti-discript p strong:hover {
+    color: hsl(219, 85%, 26%);
+}
+.noti-discript p b {
+    margin-left: 0.5em;
+}
+.noti-discript p b:hover {
+    margin-left: 0.5em;
+    color: hsl(219, 85%, 26%);
+}
+
+.exist-time {
+    width: 10em;
+    height: 1.3em;
+    color: hsl(219, 12%, 42%);
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 0;
+}
+
+.unread {
+    background-color: hsl(211, 68%, 94%);
+}
+.unread p:first-of-type::after {
+    content: "";
+    display:inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 0.5em;
+    background-color: hsl(1, 90%, 64%);
+    margin-left: 0.3em;
+}
+
+.post-img::after{
+    content: "";
+    background-image: url(./assets/images/image-chess.webp);
+    background-repeat: none;
+    background-size: 100%;
+    width: 3em;
+    height: 3em;
+    display: inline-block;
+}
+
+.messege {
+    width: 43em;
+    border: solid hsl(205, 33%, 90%);
+    border-radius: 0.3em;
+    margin-left: 5em;
+    cursor: pointer;
+}
+.messege p {
+    margin: 1em;
+    color: hsl(219, 12%, 42%);
+    font-size: 1.15em;
+    word-spacing: 0.1em;
+    line-height: 1.5;
+}
+.messege:hover {
+    background-color: hsl(211, 68%, 94%);
+}
+
+@media (max-width: 600px) {
+    .main-card {
+        width: 22em;
+        height: 100%;
+        border-radius: 0;
+        padding: 5px;
+    }
+    .box-title h1 {
+        font-size: 1.1em;
+    }
+    .box-title p {
+        left: 5em;
+    }
+    .messege {
+        width: 16em;
+        border: solid hsl(205, 33%, 90%);
+        border-radius: 0.3em;
+        margin-left: 5em;
+    }
+    .messege p {
+        margin: 0.5em;
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+    .noti-discript p {
+        font-size: 0.9em;
+    }
+    .noti-discript p strong {
+        margin-right: 0.2em;
+    }
+    .noti-discript p b {
+        margin-left: 0.2em;
+    }
+    .noti-discript {
+        margin-left: 0.5em;
+    }
+
+}
